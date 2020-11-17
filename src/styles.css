@@ -1,0 +1,67 @@
+/** @format */
+
+.container {
+  text-align: center;
+  font-family: "Mali", "Segoe UI Emoji";
+  padding: 30px;
+  margin: 0 auto;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  border: #fbc2eb;
+  background: #fbc2eb;
+  border-radius: 10px;
+  color: #9d65c9;
+  padding: 10px;
+}
+
+#city-search {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+#current {
+  margin: 0 auto;
+  color: #5d54a4;
+  font-size: 25px;
+  padding: 10px;
+  border: #fbc2eb;
+  border-radius: 10px;
+}
+
+.units {
+  vertical-align: super;
+  font-size: 70%;
+}
+.weather-icon {
+  font-size: 70px;
+}
+
+.advice {
+  font-weight: bold;
+  background: #a26dcacc;
+  color: #2a3d66;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#forecast {
+  color: #5d54a4;
+}
+
+#forecast-header {
+  font-weight: bold;
+  font-size: 30px;
+}
+.forecast-icon {
+  font-size: 40px;
+}
+
+.day {
+  font-weight: bold;
+}
