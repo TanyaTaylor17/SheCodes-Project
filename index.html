@@ -21,23 +21,27 @@
   <body>
     <div class="container">
       <h1>What's it like outside today?</h1>
-
+  <div class="row" id="search">
+    <div class="col">
       <form id="city-search">
-      <input type="text" id="searched-city-name" placeholder="Enter city here" />
-        <input
+      <input type="text" id="searched-city-name" placeholder="Enter city here" class="form-control"/>
+    </div>
+    <div class="col btn-toolbar">
+              <input
           type="submit"
           id="city-search"
-          class="btn btn-primary"
-          value="🔍"
+          class="btn btn-outline-primary btn-sm text-wrap"
+          value="🔍 Search Any Location"
         />
         <input
           type="submit"
           id="current-location"
-          class="btn btn-success"
-          value="📍"
+          class="btn btn-outline-success btn-sm text-wrap"
+          value="📍 My Current Location"
         />
+        </div>
       </form>
-
+</div>
       <div class="row" id="current">
         <div class="col-4" id="selected-city">
           <p>
@@ -45,35 +49,49 @@
             <br />
             <span id="selected-city-name"><strong></strong></span>
             <br />
+            <div class="last-updated">
+            <em><small><strong>Last Updated:</strong></small></em>
+            <br />
             <span id="selected-city-date"></span>
             <br />
             <span id="selected-city-time"></span>
-          </p>
+          </p></div>
         </div>
         <div class="col-4" id="current-conditions">
           <p>
             <strong>Current Conditions:</strong>
             <div class="weather-icon"> <img src="" alt="" id="weather-icon"></div>
+          <span id="description"><strong> </strong></span>
+           <br />
            <span id="current-temp"></span>
              <span class="units">
              <a href="#" id="celsius-link">°C</a> |
             <a href="#" id="fahrenheit-link">°F</a></span> 
-            <br />
-           <span id="description"><strong> </strong></span>
-          </p>
-        </div>
+            </p>
+          </div>
         <div class="col-4">
-          <p>
-            <br />
-            <br />
-            <strong>Precipitation: </strong> 
-            <br />
-            <strong>Humidity: </strong><span id="humidity"></span>%
-            <br />
-           <strong> Wind: </strong><span id="wind"></span> m/s
-          </p>
-        </div>
-      </div>
+          <br />
+          <br />
+          <ul class="weather-conditions">
+            <li><strong>Humidity: </strong><span id="humidity"></span>%</li>
+            <li><strong>Wind: </strong><span id="wind"></span> m/s </li>
+           <li><strong>Pressure: </strong><span id="pressure"> </span> </li>
+           </ul> 
+          </div>
+          <div class="row" id="current-temp-details">
+            
+        <div class="col">
+          <ul class="list-unstyled">
+          <li class="d-inline"><strong>Feels Like: </strong><span id="feels-like"></span> <span class="unit"> °C</span></li>
+          <li class="d-inline"><strong>Max: </strong><span id="max-temp"></span> <span class="unit"> °C</span> </li>
+           <li class="d-inline"><strong>Min: </strong><span id="min-temp"> </span> <span class="unit"> °C</span> </li>
+           </ul>
+          </div>
+          </div>
+         </div>
+        
+      
+   
   
         
         <h5 class="advice">Advice: Take an umbrella just in case! ☔</h5>

@@ -72,12 +72,21 @@ function displayWeather(response) {
   document.querySelector("#current-temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
+  document.querySelector("#feels-like").innerHTML = `${Math.round(
+    response.data.main.feels_like
+  )}`;
+  document.querySelector("#max-temp").innerHTML = `${Math.round(
+    response.data.main.temp_max
+  )}`;
+  document.querySelector("#min-temp").innerHTML = `${Math.round(
+    response.data.main.temp_min
+  )}`;
   document.querySelector(
     "#selected-city-name"
   ).innerHTML = `<strong>${response.data.name}</strong>`;
   document.querySelector(
     "#description"
-  ).innerHTML = `${response.data.weather[0].main}`;
+  ).innerHTML = `${response.data.weather[0].description}`;
   document
     .querySelector("#weather-icon")
     .setAttribute(
@@ -92,6 +101,9 @@ function displayWeather(response) {
   )}`;
   document.querySelector("#wind").innerHTML = `${Math.round(
     response.data.wind.speed
+  )}`;
+  document.querySelector("#pressure").innerHTML = `${Math.round(
+    response.data.main.pressure
   )}`;
 }
 
