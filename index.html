@@ -24,7 +24,7 @@
   <div class="row" id="search">
     <div class="col">
       <form id="city-search">
-      <input type="text" id="searched-city-name" placeholder="Enter city here" class="form-control"/>
+      <input type="search" id="searched-city-name" placeholder="Enter city here" class="form-control" autocomplete="off"/>
     </div>
     <div class="col btn-toolbar">
               <input
@@ -65,7 +65,7 @@
            <br />
            <span id="current-temp"></span>
              <span class="units">
-             <a href="#" id="celsius-link">°C</a> |
+             <a href="#" id="celsius-link" class="active">°C</a> |
             <a href="#" id="fahrenheit-link">°F</a></span> 
             </p>
           </div>
@@ -82,17 +82,13 @@
             
         <div class="col">
           <ul class="list-unstyled">
-          <li class="d-inline"><strong>Feels Like: </strong><span id="feels-like"></span> <span class="unit"> °C</span></li>
-          <li class="d-inline"><strong>Max: </strong><span id="max-temp"></span> <span class="unit"> °C</span> </li>
-           <li class="d-inline"><strong>Min: </strong><span id="min-temp"> </span> <span class="unit"> °C</span> </li>
+          <li class="d-inline"><strong>Feels Like: </strong><span id="feels-like"></span><span class="unit" id="feels-like-unit"> </span></li>
+          <li class="d-inline"><strong>Max: </strong><span id="max-temp"></span><span class="unit" id ="max-temp-unit"> </span> </li>
+           <li class="d-inline"><strong>Min: </strong><span id="min-temp"> </span><span class="unit" id ="min-temp-unit"> </span> </li>
            </ul>
           </div>
           </div>
          </div>
-        
-      
-   
-  
         
         <h5 class="advice">Advice: Take an umbrella just in case! ☔</h5>
         
@@ -133,8 +129,9 @@
         <span class="footer"
           ><small> <a href="https://github.com/TanyaTaylor17/SheCodes-Project-Weather-App" target="_blank">Open-source code</a> by
           <a href="https://www.linkedin.com/in/tanya-taylor/" target="_blank"
-            >Tanya Taylor</a
-          ></small>
+            >Tanya Taylor</a> & Hosted by <a href="https://eloquent-hedgehog-1713.netlify.app/" target="_blank"
+            >Netlify</a
+          > </small>
         </span>
       </div>
     </div>
