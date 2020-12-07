@@ -62,6 +62,7 @@ function showCurrentCoords(position) {
 // Displaying current weather conditions
 
 function displayWeather(response) {
+  console.log(response);
   document.querySelector("#current-temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
@@ -105,6 +106,8 @@ function displayWeather(response) {
   document.querySelector("#pressure").innerHTML = `${Math.round(
     response.data.main.pressure
   )}`;
+
+  updateAdvice(response);
 }
 
 // Converting Between Celsius & Fahrenheit
@@ -146,6 +149,55 @@ function displayCelsius(event) {
   document.querySelector("#max-temp-unit").innerHTML = "°C";
   document.querySelector("#min-temp-unit").innerHTML = "°C";
 }
+
+// Updating advice
+
+function updateAdvice(response) {
+  let displayAdvice = document.querySelector(".advice");
+
+  if (response.data.main.temp >= 20) {
+    displayAdvice.innerHTML =
+      "Advice: It’s warm today, remember to stay hydrated! 😎";
+  } else if (response.data.main.temp >= 25) {
+    displayAdvice.innerHTML =
+      "Warning: It’s very hot today, don’t forget to carry sunscreen and water!☀";
+  } else if (
+    response.data.main.temp <= 0 ||
+    response.data.weather[0].main == "Snow"
+  ) {
+    displayAdvice.innerHTML =
+      "Advice: Winter coat & accessories required – it’s freezing out there! ⛄";
+  } else if (response.data.main.temp <= 5) {
+    displayAdvice.innerHTML = "Advice: Wrap up warm – it’s cold out there! ❄";
+  } else if (
+    response.data.weather[0].main == "Rain" ||
+    response.data.weather[0].main == "Drizzle"
+  ) {
+    displayAdvice.innerHTML = "Advice: Take an umbrella just in case! ☔";
+  } else if ((response.data.weather[0].main = "Thunderstorm")) {
+    displayAdvice.innerHTML =
+      "Warning: There are thunderstorms forecast today! 🌩";
+  } else if (
+    response.data.weather[0].main == "Mist" ||
+    response.data.weather[0].main == "Smoke" ||
+    response.data.weather[0].main == "Haze" ||
+    response.data.weather[0].main == "Dust" ||
+    response.data.weather[0].main == "Fog" ||
+    response.data.weather[0].main == "Sand" ||
+    response.data.weather[0].main == "Dust" ||
+    response.data.weather[0].main == "Ash" ||
+    response.data.weather[0].main == "Squall" ||
+    response.data.weather[0].main == "Tornado"
+  ) {
+    displayAdvice.innerHTML =
+      "Warning: Potentially hazardous weather conditions today – be safe and sensible!⚠";
+  } else {
+    displayAdvice.innerHTML =
+      "Advice: It's always good to be prepared - check the forecast below before you head out! 😊";
+  }
+}
+
+// Displaying hourly & daily forecasts
 
 function formatHours(timestamp) {
   let currentDate = new Date(timestamp);
@@ -205,7 +257,6 @@ function displayHourlyForecast(response) {
 }
 
 function displayDailyForecast(response) {
-  console.log(response);
   document.querySelector("#daily-forecast").innerHTML = null;
   let forecast = null;
 
