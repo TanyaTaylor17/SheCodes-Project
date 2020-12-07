@@ -154,12 +154,12 @@ function displayCelsius(event) {
 function updateAdvice(response) {
   let displayAdvice = document.querySelector(".advice");
 
-  if (response.data.main.temp >= 20) {
+  if (response.data.main.temp >= 25) {
+    displayAdvice.innerHTML =
+      "Warning: It’s hot today, don’t forget to carry sunscreen and water!☀";
+  } else if (response.data.main.temp >= 20) {
     displayAdvice.innerHTML =
       "Advice: It’s warm today, remember to stay hydrated! 😎";
-  } else if (response.data.main.temp >= 25) {
-    displayAdvice.innerHTML =
-      "Warning: It’s very hot today, don’t forget to carry sunscreen and water!☀";
   } else if (
     response.data.main.temp <= 0 ||
     response.data.weather[0].main == "Snow"

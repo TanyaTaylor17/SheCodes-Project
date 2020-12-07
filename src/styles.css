@@ -142,6 +142,13 @@ h1 {
   font-size: 30px;
 }
 
+hr {
+  background-color: #a26dcacc;
+  height: 2px;
+  max-width: 75%;
+  border-radius: 20px;
+}
+
 .footer {
   padding-top: 15px;
 }
