@@ -62,7 +62,6 @@ function showCurrentCoords(position) {
 // Displaying current weather conditions
 
 function displayWeather(response) {
-  console.log(response);
   document.querySelector("#current-temp").innerHTML = `${Math.round(
     response.data.main.temp
   )}`;
