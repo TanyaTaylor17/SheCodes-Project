@@ -130,16 +130,18 @@ h1 {
 
 #forecast {
   color: #5d54a4;
+  padding: 10px;
+  text-transform: capitalize;
+  padding-bottom: 30px;
 }
 
 #forecast-header {
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-weight: bold;
   font-size: 30px;
 }
-.forecast-icon {
-  font-size: 40px;
-}
 
-.day {
-  font-weight: bold;
+.footer {
+  padding-top: 15px;
 }

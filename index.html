@@ -91,40 +91,17 @@
          </div>
         
         <h5 class="advice">Advice: Take an umbrella just in case! ☔</h5>
-        
-        <div class="row" id="forecast">
-          <div class="col-12" id="forecast-header">5 Day Forecast</div>
-          <div class="col forecast">
-             <p> <div class="forecast-icon">⛅</div>
-             <span class="day">Monday</span>
-            <br> ☀ 13°C 🌙 6°C 
-            </p> 
-          </div>
-         <div class="col forecast">
-             <p> <div class="forecast-icon">🌧</div>
-             <span class="day">Tuesday</span> 
-            <br> ☀ 14°C 🌙 8°C 
-            </p> 
-          </div>
-         <div class="col forecast">
-             <p><div class="forecast-icon">🌦</div>
-            <span class="day">Wednesday</span>
-            <br> ☀ 13°C 🌙 9°C 
-            </p> 
-          </div>
-          <div class="col forecast">
-             <p><div class="forecast-icon">⛅</div>
-             <span class="day">Thursday</span>
-            <br> ☀ 15°C 🌙 13°C 
-            </p> 
-          </div>
-          <div class="col forecast">
-             <p><div class="forecast-icon">☁</div>
-            <span class="day">Friday</span> 
-            <br> ☀ 17°C 🌙 13°C 
-            </p> 
-          </div>
+        <div id="forecast">
+        <div id="hourly-forecast-header">
+           <div class="row" id="hourly-forecast-header"></div>
+        <div class="col-12" id="forecast-header">Hourly Forecast</div>
+        <div class="row hourly-forecast" id="hourly-forecast"></div>
+        <hr />
+         <div class="row" id="daily-forecast-header"></div>
+        <div class="col-12" id="forecast-header">5 Day Forecast</div>
+        <div class="row daily-forecast" id="daily-forecast"></div>  
         </div>
+      </div>
       
         <span class="footer"
           ><small> <a href="https://github.com/TanyaTaylor17/SheCodes-Project-Weather-App" target="_blank">Open-source code</a> by
@@ -135,7 +112,7 @@
         </span>
       </div>
     </div>
-  
+  </div>
     <script src="src/index.js"></script>
   </body>
 </html>
